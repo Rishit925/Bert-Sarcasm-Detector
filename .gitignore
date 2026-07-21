@@ -1,0 +1,46 @@
+# Virtual Environment
+venv/
+env/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment Variables
+.env
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Python Build
+build/
+dist/
+*.egg-info/
+
+# Streamlit
+.streamlit/
+
+# Hugging Face Cache
+.cache/
+
+# Pytest
+.pytest_cache/
+
+# Coverage
+.coverage
+htmlcov/
+bert_sarcasm_classifier.pth
