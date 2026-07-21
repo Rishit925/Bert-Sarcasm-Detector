@@ -6,13 +6,12 @@
 ![FastAPI](https://img.shields.io/badge/FastAPI-API-green?logo=fastapi)
 ![Streamlit](https://img.shields.io/badge/Streamlit-WebApp-FF4B4B?logo=streamlit)
 ![Docker](https://img.shields.io/badge/Docker-Container-blue?logo=docker)
-![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
 
 ## 📌 Project Overview
 
-This project is an end-to-end NLP application that detects whether a news headline is **Sarcastic** or **Not Sarcastic** using a fine-tuned **BERT (bert-base-uncased)** model.
+This project is an end-to-end NLP application that detects whether a news headline is **Sarcastic** or **Not Sarcastic** using a fine-tuned **BERT (bert-base-uncased)** model. The project includes an interactive Streamlit web interface, a FastAPI REST API with Swagger documentation, and Docker support for containerized execution.
 
 The application provides:
 
@@ -24,6 +23,12 @@ The application provides:
 - 🤖 Deep Learning based inference using BERT
 
 ---
+
+# 🔗 Project Links
+
+- **GitHub Repository:** https://github.com/Rishit925/Bert-Sarcasm-Detector
+- **Hugging Face Model:** https://huggingface.co/Rishit925/Bert-Sarcasm-Detector
+- **Live Demo:** Not deployed (Model size exceeds free cloud hosting limits)
 
 # 🏗 Project Architecture
 
@@ -60,21 +65,21 @@ E --> G
 
 ## Home Page
 
-![Home](screenshots/home.png)
+![Home](assets/home.png)
 
 ---
 
 ## Prediction
 
-![Prediction](screenshots/prediction.png)
+![Prediction](assets/prediction.png)
 
 ---
 
 ## FastAPI Swagger
 
-![Swagger 1](screenshots/swagger-ui-1.png)
+![Swagger 1](assets/swagger-ui-1.png)
 
-![Swagger 2](screenshots/swagger-ui-2.png)
+![Swagger 2](assets/swagger-ui-2.png)
 
 ---
 
@@ -122,7 +127,7 @@ Sarcasm-Detection/
 
 │── tokenizer/
 
-│── screenshots/
+│── assets/
 
 │     ├── home.png
 │     ├── prediction.png
@@ -140,13 +145,13 @@ Sarcasm-Detection/
 Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Sarcasm-Detection.git
+git clone https://github.com/Rishit925/Bert-Sarcasm-Detector.git
 ```
 
 Move inside the folder
 
 ```bash
-cd Sarcasm-Detection
+cd Bert-Sarcasm-Detector
 ```
 
 Create virtual environment
@@ -168,6 +173,10 @@ Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
+
+> **Note**
+>
+> The trained BERT model (~439 MB) is hosted separately on Hugging Face because GitHub repositories have a 100 MB file size limit.
 
 ---
 
@@ -231,6 +240,17 @@ docker compose down
 
 ---
 
+# 📌 Deployment Status
+
+The application has been successfully tested locally using:
+
+- ✅ Streamlit
+- ✅ FastAPI
+- ✅ Docker
+- ✅ Docker Compose
+
+The trained model is hosted separately on Hugging Face due to its size (~439 MB). Therefore, a public cloud deployment is not included in this repository.
+
 # 📡 API Endpoint
 
 ### POST
@@ -274,10 +294,11 @@ Response
 # 📈 Future Improvements
 
 - Improve model accuracy through hyperparameter tuning.
-- Experiment with larger transformer models (e.g. RoBERTa, DeBERTa).
-- Deploy FastAPI and Streamlit as live cloud services.
+- Train on a larger and more diverse sarcasm dataset.
+- Experiment with RoBERTa, DistilBERT, and DeBERTa.
 - Add batch prediction support.
-- Introduce user authentication and logging.
+- Deploy using cloud infrastructure with persistent model storage.
+- Improve inference speed through model optimization.
 
 ---
 
