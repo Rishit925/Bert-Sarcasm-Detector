@@ -11,7 +11,7 @@
 
 ## 📌 Project Overview
 
-This project is an end-to-end NLP application that detects whether a news headline is **Sarcastic** or **Not Sarcastic** using a fine-tuned **BERT (bert-base-uncased)** model. The project includes an interactive Streamlit web interface, a FastAPI REST API with Swagger documentation, and Docker support for containerized execution.
+The project includes an interactive Streamlit web application deployed on Streamlit Community Cloud, a FastAPI REST API with Swagger documentation, and Docker support for containerized execution.
 
 The application provides:
 
@@ -28,7 +28,7 @@ The application provides:
 
 - **GitHub Repository:** https://github.com/Rishit925/Bert-Sarcasm-Detector
 - **Hugging Face Model:** https://huggingface.co/Rishit925/Bert-Sarcasm-Detector
-- **Live Demo:** Not deployed (Model size exceeds free cloud hosting limits)
+- **Live Demo:** https://bert-sarcasm-detector-2pfyxhjwb9dxg3thwwrtss.streamlit.app/
 
 # 🏗 Project Architecture
 
@@ -123,7 +123,6 @@ Sarcasm-Detection/
 │── requirements.txt
 │── README.md
 │── .gitignore
-│── bert_sarcasm_classifier.pth
 
 │── tokenizer/
 
@@ -176,7 +175,7 @@ pip install -r requirements.txt
 
 > **Note**
 >
-> The trained BERT model (~439 MB) is hosted separately on Hugging Face because GitHub repositories have a 100 MB file size limit.
+> The trained BERT model (~439 MB) is hosted on Hugging Face Hub and is automatically downloaded when the application starts. This keeps the GitHub repository lightweight while enabling seamless deployment on Streamlit Community Cloud.
 
 ---
 
@@ -242,14 +241,15 @@ docker compose down
 
 # 📌 Deployment Status
 
-The application has been successfully tested locally using:
+The application has been successfully deployed and tested on Streamlit Community Cloud.
 
-- ✅ Streamlit
-- ✅ FastAPI
-- ✅ Docker
-- ✅ Docker Compose
+### Deployment Details
 
-The trained model is hosted separately on Hugging Face due to its size (~439 MB). Therefore, a public cloud deployment is not included in this repository.
+- ✅ Streamlit Community Cloud
+- ✅ Hugging Face Hub for model hosting
+- ✅ Automatic model download during application startup
+- ✅ FastAPI support
+- ✅ Docker & Docker Compose support
 
 # 📡 API Endpoint
 
@@ -297,7 +297,7 @@ Response
 - Train on a larger and more diverse sarcasm dataset.
 - Experiment with RoBERTa, DistilBERT, and DeBERTa.
 - Add batch prediction support.
-- Deploy using cloud infrastructure with persistent model storage.
+- Deploy the FastAPI backend to a cloud platform such as Render or Railway.
 - Improve inference speed through model optimization.
 
 ---
@@ -308,6 +308,3 @@ Response
 
 ---
 
-# ⭐ If you found this project useful
-
-Please consider giving the repository a ⭐ on GitHub.
