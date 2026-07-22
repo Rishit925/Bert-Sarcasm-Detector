@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 from transformers import AutoTokenizer, AutoModel
+from huggingface_hub import hf_hub_download
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -39,9 +40,19 @@ class MyModel(nn.Module):
 # Load trained model
 model = MyModel(bert_model)
 
+# Load trained model
+model = MyModel(bert_model)
+
+# Download model from Hugging Face
+model_path = hf_hub_download(
+    repo_id="Rishit925/Bert-Sarcasm-Detector",
+    filename="bert_sarcasm_classifier.pth"
+)
+
+# Load weights
 model.load_state_dict(
     torch.load(
-        "bert_sarcasm_classifier.pth",
+        model_path,
         map_location=device
     )
 )
